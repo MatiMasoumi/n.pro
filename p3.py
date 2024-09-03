@@ -1,7 +1,11 @@
-def get_score(low,high):
-  score=float(input(f'enter the student score (between {low} and {high}:)'))
-  if low <= score <= high:
-    return score
-  else:
-    print(f'enter a value between {low} and {high}')
-    return get_score(low,high)
+def multiply(start,end):
+  if start==end:
+    return start
+  return start * multiply(start+1,end)
+start=int(input('enter  the start:'))
+end=int(input('enter the end:'))
+
+if start > end:
+  print('the start should be less than the end number:')
+result=multiply(start,end)
+print(f'{start} and {end} is : {result}')
